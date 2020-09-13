@@ -2,8 +2,7 @@ FROM ubuntu:20.04
 MAINTAINER janhkrueger <janhkrueger@outlook.com>
 
 RUN TZ=UTC  && \
-    export DEBIAN_FRONTEND=noninteractive && \
-    ENV DEBIAN_FRONTEND=noninteractive
+    export DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt install -y tzdata
