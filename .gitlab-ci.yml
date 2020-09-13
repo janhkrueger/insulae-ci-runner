@@ -27,11 +27,12 @@ build-dev-image:
   stage: build-image
   <<: *dev_env
   script:
-    - docker login -u "${my_registry}" -p "${DOCKERHUBPW}"
+    - docker login registry.gitlab.com -u "${my_registry}" -p "${GITLABREGISTRY}"
     - echo "Building container image $container_image"
-    - docker build -f ubuntu-20.04.dockerfile -t "${container_image}" .
+    - docker build -f ubuntu-20.04.dockerfile -t "${container_image}" -t registry.gitlab.com/insulae_dev/insulae-ci-runner .
     - docker run "${container_image}"
     - docker tag "${container_image}" "${my_registry}"/"${container_image}":"${env_tag}"
     - docker push "${my_registry}"/"${container_image}":"${env_tag}"
+    - docker push registry.gitlab.com/insulae_dev/insulae-ci-runner:"${env_tag}"
 
 
