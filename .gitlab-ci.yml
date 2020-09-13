@@ -29,7 +29,7 @@ build-dev-image:
   script:
     - docker login -u "${my_registry}" -p "${DOCKERHUBPW}"
     - echo "Building container image $container_image"
-    - docker build -t "${container_image}" .
+    - docker build -f ubuntu-20.04.dockerfile -t "${container_image}" .
     - docker run "${container_image}"
     - docker tag "${container_image}" "${my_registry}"/"${container_image}":"${env_tag}"
     - docker push "${my_registry}"/"${container_image}":"${env_tag}"
