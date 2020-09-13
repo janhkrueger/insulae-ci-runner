@@ -1,9 +1,9 @@
 FROM ubuntu:20.04
 MAINTAINER janhkrueger <janhkrueger@outlook.com>
 
-RUN TZ=UTC
-RUN export DEBIAN_FRONTEND=noninteractive
-ENV DEBIAN_FRONTEND=noninteractive
+RUN TZ=UTC  && \
+    export DEBIAN_FRONTEND=noninteractive && \
+    ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt install -y tzdata
@@ -20,23 +20,20 @@ RUN git clone https://github.com/Tencent/rapidjson/ && \
     cmake .. && \
     make && \
     make install && \
-    make clean
-
-
-RUN git clone https://github.com/jpbarrette/curlpp && \
+    make clean && \
+    git clone https://github.com/jpbarrette/curlpp && \
 	cd curlpp/ && \
 	mkdir build && \
 	cd build/ && \
 	cmake .. && \
 	make && \
     make install && \
-  make clean
-
-RUN git clone https://github.com/catchorg/Catch2 && \
+    make clean && \
+    git clone https://github.com/catchorg/Catch2 && \
 	cd Catch2/ && \
 	mkdir build && \
 	cd build/ && \
 	cmake .. && \
 	make && \
 	make install && \
-  make clean
+    make clean
