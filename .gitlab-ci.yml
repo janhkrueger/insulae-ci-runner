@@ -12,7 +12,7 @@ services:
   variables:
     env_tag: 'dev'
   only:
-    - master
+    - main
 
 # set varialbes
 variables:
