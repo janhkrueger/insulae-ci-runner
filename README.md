@@ -5,11 +5,6 @@ Providing a build enviroment for [insulae]. All necessary packages to build the 
 The resulting docker container is archived in Gitlabs [container-registry] and are used in the the CI/CD pipeline of Insulae.
 
 
-Thanks
-------
-
-[@janhkrueger][janhkrueger]
-
 Copyright 2020+ [Friedrichsdorf Germany][janhkrueger].
 
 > [janhkrueger.de](http://janhkrueger.de) &nbsp;&middot;&nbsp;
