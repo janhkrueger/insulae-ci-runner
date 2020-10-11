@@ -30,6 +30,7 @@ RUN git clone https://github.com/Tencent/rapidjson/ && \
     make clean && \
     git clone https://github.com/catchorg/Catch2 && \
 	cd Catch2/ && \
+    git checkout v2.13.2 && \
 	mkdir build && \
 	cd build/ && \
 	cmake .. && \
