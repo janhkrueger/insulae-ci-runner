@@ -29,5 +29,6 @@ build-dev-image:
     - echo "Building container image $container_image"
     - docker build -f ubuntu-20.04.dockerfile -t registry.gitlab.com/janhkrueger/insulae-ci-runner:"${env_tag}" .
     - docker push registry.gitlab.com/janhkrueger/insulae-ci-runner:"${env_tag}"
+    - dig _gitlab-pages-verification-code.janhkrueger.de txt
 
 
