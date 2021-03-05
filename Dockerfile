@@ -27,11 +27,4 @@ RUN git clone https://github.com/Tencent/rapidjson/ && \
 	cmake .. && \
 	make && \
     make install && \
-    make clean && \
-    git clone https://github.com/google/googletest && \
-    cd googletest/ && \
-    mkdir build && \
-    cd build && \
-    cmake .. -DBUILD_GMOCK=OFF && \
-    make && \
-    make install
+    make clean
