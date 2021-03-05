@@ -42,4 +42,4 @@ build-dev-image:
 container_scanning:
   variables:
     GIT_STRATEGY: fetch
-    DOCKER_IMAGE: $IMAGE
+    #DOCKER_IMAGE: $IMAGE
