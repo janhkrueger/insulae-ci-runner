@@ -16,7 +16,7 @@ RUN git clone https://github.com/Tencent/rapidjson/ && \
     cd rapidjson/ && \
     mkdir build && \
     cd build/ && \
-    cmake -DRAPIDJSON_BUILD_EXAMPLES=OFF -DRAPIDJSON_BUILD_DOC=OFF .. && \
+    cmake -DRAPIDJSON_BUILD_EXAMPLES=OFF -DRAPIDJSON_BUILD_DOC=OFF -DRAPIDJSON_BUILD_TESTS=OFF -DRAPIDJSON_BUILD_ASAN=ON -DRAPIDJSON_BUILD_UBSAN=ON .. && \
     make && \
     make install && \
     make clean && \

@@ -24,7 +24,7 @@ variables:
   GIT_SSL_NO_VERIFY: "true"
   my_registry: "janhkrueger"
   #IMAGE: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
-  IMAGE: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$env_tag
+  IMAGE: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:${env_tag}
 
 #build and push dev image
 build-dev-image:
@@ -32,6 +32,7 @@ build-dev-image:
   stage: build-image
   <<: *dev_env
   script:
+    - echo $IMAGE
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - echo "Building container image $container_image"
     - docker build -t $IMAGE .
