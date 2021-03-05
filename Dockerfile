@@ -34,4 +34,4 @@ RUN git clone https://github.com/Tencent/rapidjson/ && \
     cd build && \
     cmake .. -DBUILD_GMOCK=OFF && \
     make && \
-    make install && \
+    make install
