@@ -33,4 +33,6 @@ build-dev-image:
     - docker build -f ubuntu-20.04.dockerfile -t registry.gitlab.com/janhkrueger/insulae-ci-runner:"${env_tag}" .
     - docker push registry.gitlab.com/janhkrueger/insulae-ci-runner:"${env_tag}"
 
-
+container_scanning:
+  variables:
+    GIT_STRATEGY: fetch
