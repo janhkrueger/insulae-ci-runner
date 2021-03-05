@@ -33,7 +33,7 @@ build-dev-image:
   script:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - echo "Building container image $container_image"
-    - docker build -f ubuntu-20.04.dockerfile -t $IMAGE
+    - docker build -t $IMAGE .
     - docker push $IMAGE
 
 container_scanning:
