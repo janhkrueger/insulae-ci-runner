@@ -28,12 +28,10 @@ RUN git clone https://github.com/Tencent/rapidjson/ && \
 	make && \
     make install && \
     make clean && \
-    git clone https://github.com/catchorg/Catch2 && \
-	cd Catch2/ && \
-    git checkout v2.13.2 && \
-	mkdir build && \
-	cd build/ && \
-	cmake .. && \
-	make && \
-	make install && \
-    make clean
+    git clone https://github.com/google/googletest && \
+	cd googletest/ && \
+    mkdir build && \
+    cd build && \
+    cmake .. -DBUILD_GMOCK=OFF && \
+    make && \
+    make install && \
