@@ -43,5 +43,3 @@ container_scanning:
   variables:
     GIT_STRATEGY: fetch
     DOCKER_IMAGE: $IMAGE
-  script:
-    - echo $IMAGE
