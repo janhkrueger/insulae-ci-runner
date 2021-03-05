@@ -4,7 +4,7 @@ include:
 
 stages:
   - build-image
-  - container_scanning
+  - test
 
 image: docker
 services:
