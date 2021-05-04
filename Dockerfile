@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:hirsute
 LABEL maintainer="janhkrueger@outlook.com"
 
 RUN TZ=UTC  && \
