@@ -11,7 +11,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
-    git clone https://github.com/Tencent/rapidjson/ && \
+    git clone https://gitlab.com/insulae_dev/external-components/rapidjson/ && \
     cd rapidjson/ && \
     mkdir build && \
     cd build/ && \
@@ -19,7 +19,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     make && \
     make install && \
     make clean && \
-    git clone https://github.com/jpbarrette/curlpp && \
+    git clone https://gitlab.com/insulae_dev/external-components/curlpp && \
     cd curlpp/ && \
     mkdir build && \
     cd build/ && \
