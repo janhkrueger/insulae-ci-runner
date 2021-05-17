@@ -26,7 +26,8 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     cmake .. && \
     make && \
     make install && \
-    make clea    git clone https://gitlab.com/insulae_dev/external-components/libvault && \
+    make clean && \
+    git clone https://gitlab.com/insulae_dev/external-components/libvault && \
     cd libvault/ && \
     mkdir build && \
     cd build/ && \
