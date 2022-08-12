@@ -1,4 +1,4 @@
-FROM ubuntu:impish
+FROM ubuntu:latest
 LABEL maintainer="janhkrueger@outlook.com"
 
 RUN TZ=UTC  && \
