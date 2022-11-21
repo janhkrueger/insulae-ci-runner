@@ -37,5 +37,5 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     make clean
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
-    apt update && \
-    apt install libpistache-dev
+    apt update -y -qq && \
+    apt install -y -qq libpistache-dev
