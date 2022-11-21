@@ -34,4 +34,8 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     cmake -DENABLE_TEST=OFF -DLINK_CURL=ON .. && \
     make && \
     make install && \
-    make clean    
+    make clean
+
+RUN add-apt-repository ppa:pistache+team/unstable && \
+    apt update && \
+    apt install libpistache-dev
