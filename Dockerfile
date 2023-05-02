@@ -41,8 +41,8 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     make clean && \
     cd .. && \
     cd .. && \
-    git clone https://gitlab.com/insulae_dev/external-components/googletest && \
-    cd googleTest && \
+    git clone https://gitlab.com/insulae_dev/external-components/googletest.git && \
+    cd googletest && \
     mkdir build && \
     cd build && \
     cmake .. -DBUILD_GMOCK=OFF && \
