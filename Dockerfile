@@ -19,7 +19,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     make && \
     make install && \
     make clean && \
-    cd ..\.. && \
+    cd ..\\.. && \
     git clone https://gitlab.com/insulae_dev/external-components/curlpp && \
     cd curlpp/ && \
     mkdir build && \
@@ -28,7 +28,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     make && \
     make install && \
     make clean && \
-    cd ..\.. && \
+    cd ..\\.. && \
     git clone https://gitlab.com/insulae_dev/external-components/libvault && \
     cd libvault/ && \
     mkdir build && \
@@ -37,7 +37,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     make && \
     make install && \
     make clean && \
-    cd ..\.. && \
+    cd ..\\.. && \
     git clone https://gitlab.com/insulae_dev/external-components/googletest && \
     cd googleTest && \
     mkdir build && \
@@ -45,7 +45,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     cmake .. -DBUILD_GMOCK=OFF && \
     make && \
     make install && \
-    cd ..\..
+    cd ..\\..
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
     apt update -y -qq && \
