@@ -7,7 +7,7 @@ RUN TZ=UTC  && \
 RUN apt-get update && \
     apt install -y tzdata
 
-RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev g++-multilib gnu-standards gdbserver git clang llvm libspdlog-dev jq && \
+RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev g++-multilib gnu-standards gdbserver git clang llvm libspdlog-dev jq gcovr ggcov lcov && \
     apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
