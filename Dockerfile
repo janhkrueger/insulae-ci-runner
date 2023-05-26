@@ -7,7 +7,7 @@ RUN TZ=UTC  && \
 RUN apt-get update && \
     apt install -y tzdata
 
-RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr ggcov lcov
+RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr gcov lcov
 
 RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev g++-multilib gnu-standards gdbserver git clang llvm libspdlog-dev jq && \
     apt-get clean autoclean && \
