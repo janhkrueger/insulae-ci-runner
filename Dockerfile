@@ -47,9 +47,7 @@ RUN apt-get -y --no-install-recommends -qq install build-essential wget ca-certi
     cd build && \
     cmake .. -DBUILD_GMOCK=OFF && \
     make && \
-    make install && \
-    cd .. && \
-    cd ..
+    make install
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
     apt update -y -qq && \
