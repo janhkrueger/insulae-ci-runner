@@ -54,7 +54,11 @@ RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr l
     cd yaml-cpp && \
     mkdir build && \
     cd build && \
-    cmake -DYAML_BUILD_SHARED_LIBS=OFF ..
+    cmake -DYAML_BUILD_SHARED_LIBS=OFF .. && \
+    make && \
+    make install && \
+    cd ..  && \
+    rm -rf build
 
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
