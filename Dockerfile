@@ -4,10 +4,11 @@ LABEL maintainer="janhkrueger@outlook.com"
 RUN TZ=UTC  && \
     export DEBIAN_FRONTEND=noninteractive
 
-RUN add-apt-repository ppa:pistache+team/unstable
 
 RUN apt-get update && \
     apt install -y tzdata
+
+RUN add-apt-repository ppa:pistache+team/unstable
 
 RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr lcov build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev g++-multilib gnu-standards gdbserver git clang llvm libspdlog-dev jq yaml-cpp libpistache-dev && \
     apt-get clean autoclean && \
