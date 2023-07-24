@@ -7,7 +7,7 @@ RUN TZ=UTC  && \
 RUN apt-get update && \
     apt install -y tzdata
 
-RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr lcov build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev g++-multilib gnu-standards gdbserver git clang llvm libspdlog-dev jq yaml-cpp && \
+RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr lcov build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev g++-multilib gnu-standards gdbserver git clang llvm libspdlog-dev jq && \
     apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/* && \
@@ -48,6 +48,8 @@ RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr l
     cmake .. -DBUILD_GMOCK=OFF && \
     make && \
     make install
+
+RUN apt-get -y --no-install-recommends -qq install yaml-cpp
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
     apt update -y -qq && \
