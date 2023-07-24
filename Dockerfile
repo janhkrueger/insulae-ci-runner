@@ -47,9 +47,15 @@ RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr l
     cd build && \
     cmake .. -DBUILD_GMOCK=OFF && \
     make && \
-    make install
+    make install && \
+    cd .. && \
+    cd .. && \
+    git clone https://github.com/jbeder/yaml-cpp.git && \
+    cd yaml-cpp && \
+    mkdir build && \
+    cd build && \
+    cmake -DYAML_BUILD_SHARED_LIBS=OFF ..
 
-RUN apt-get -y --no-install-recommends -qq install yaml-cpp-dev
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
     apt update -y -qq && \
