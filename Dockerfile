@@ -49,7 +49,7 @@ RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr l
     make && \
     make install
 
-RUN apt-get -y --no-install-recommends -qq install yaml-cpp
+RUN apt-get -y --no-install-recommends -qq install yaml-cpp-dev
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
     apt update -y -qq && \
