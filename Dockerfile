@@ -64,4 +64,4 @@ RUN apt-get clean autoclean && \
 
 RUN add-apt-repository ppa:pistache+team/unstable && \
     apt update && \
-    apt install libpistache-dev
+    apt install -y -qq libpistache-dev
