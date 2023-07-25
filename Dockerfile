@@ -58,9 +58,10 @@ RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr l
     cd ..  && \
     rm -rf build
 
-RUN add-apt-repository ppa:pistache+team/unstable && \
-    apt update -y -qq && \
-    apt install -y -qq && \
-    apt-get clean autoclean && \
+RUN apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
+
+RUN add-apt-repository ppa:pistache+team/unstable && \
+    apt update -y -qq && \
+    apt install -y -qq
