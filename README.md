@@ -1,9 +1,12 @@
 # Insulae-ci-runner
 
-Providing a build enviroment for [insulae]. All necessary packages to build the Insulae jobs are included. Also the packages to build und run the unittests in the C++ components. 
+Providing a build enviroment for [insulae]. All necessary packages to build the Insulae jobs are included. Also the packages to build und run the unittests in the C++ components.
 
 The resulting docker container is archived in Gitlabs [container-registry] and are used in the the CI/CD pipeline of Insulae.
 
+Local build:
+docker builder prune --all
+docker build --no-cache --pull -t insulae-ci-runner:dev .
 
 Copyright 2020+ [Friedrichsdorf Germany][janhkrueger].
 
