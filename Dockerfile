@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt install -y tzdata && \
     apt-get update && apt-get upgrade
 
-RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr lcov build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev gnu-standards gdbserver git clang llvm libspdlog-dev jq && \
+RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr lcov build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev gnu-standards gdbserver git clang llvm libspdlog-dev jq libpistache-dev && \
     git clone https://gitlab.com/insulae_dev/external-components/rapidjson/ && \
     cd rapidjson/ && \
     mkdir build && \
@@ -61,7 +61,3 @@ RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr l
 RUN apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
-
-RUN add-apt-repository ppa:pistache+team/unstable && \
-    apt update -y -qq && \
-    apt install -y -qq
