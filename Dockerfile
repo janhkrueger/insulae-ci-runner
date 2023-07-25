@@ -62,6 +62,6 @@ RUN apt-get clean autoclean && \
     apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
 
-RUN add-apt-repository ppa:pistache+team/stable
-RUN apt update
-RUN apt install libpistache-dev
+RUN add-apt-repository ppa:pistache+team/unstable && \
+    apt update && \
+    apt install libpistache-dev
