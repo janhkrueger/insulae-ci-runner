@@ -5,8 +5,8 @@ RUN TZ=UTC  && \
     export DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt install -y --no-install-recommends -qq tzdata && \
-    apt-get update && apt-get upgrade
+    apt install -qq -y --no-install-recommends tzdata curl && \
+    apt-get update && apt-get -qq -y upgrade
 
 RUN apt-get -y --no-install-recommends -qq install make autoconf gcc g++ gcovr lcov build-essential wget ca-certificates gnupg2 cmake make autoconf automake gdb libpq-dev libpqxx-dev postgresql-server-dev-all curl libcurl4-openssl-dev libcurl4 software-properties-common libssl-dev gnu-standards gdbserver git clang llvm libspdlog-dev jq libopencv-imgcodecs-dev libopencv-dev python3-opencv && \
     git clone https://gitlab.com/insulae_dev/external-components/rapidjson/ && \
