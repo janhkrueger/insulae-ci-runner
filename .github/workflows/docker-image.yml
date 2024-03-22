@@ -22,6 +22,7 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker builder prune --all docker build --no-cache --pull -t insulae-ci-runner:$(date +%s) .
+        docker builder prune --all 
+        docker build --no-cache --pull -t insulae-ci-runner:$(date +%s) .
         # run: docker build . --file Dockerfile --tag insulae-ci-runner:$(date +%s)
         # run: docker builder prune --all docker build --tag insulae-ci-runner:$(date +%s) .
