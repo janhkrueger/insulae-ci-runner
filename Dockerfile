@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:mantic-20240216
 LABEL maintainer="janhkrueger@outlook.com"
 
 RUN TZ=UTC  && \
